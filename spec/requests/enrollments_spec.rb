@@ -7,7 +7,7 @@ RSpec.describe "Enrollments", type: :request do
     batch = create(:batch)
 
     post api_v1_enrollments_path, params: {
-      enrollment: { 
+      enrollment: {
         student_id: student.id,
         batch_id: batch.id
       }
@@ -17,4 +17,3 @@ RSpec.describe "Enrollments", type: :request do
     expect(Enrollment.last.pending?).to be true
   end
 end
-

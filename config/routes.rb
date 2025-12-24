@@ -14,11 +14,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   namespace :api do
     namespace :v1 do
-      resources :enrollments, only: [:create]
+      resources :enrollments, only: [ :create ]
       resources :batches, only: [] do
         get :students, on: :member
       end
     end
   end
-
 end

@@ -1,5 +1,5 @@
 class Api::V1::EnrollmentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create]
+  skip_before_action :authenticate_user!, only: [ :create ]
 
   def create
     enrollment = Enrollment.create!(

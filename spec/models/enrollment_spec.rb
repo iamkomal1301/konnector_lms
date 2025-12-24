@@ -14,4 +14,3 @@ RSpec.describe Enrollment, type: :model do
     expect(Enrollment.reflect_on_association(:student).macro).to eq(:belongs_to)
   end
 end
-
